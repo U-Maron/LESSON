@@ -1,6 +1,9 @@
 package jm.task.core.jdbc.util;
 
-import java.sql.*;
+ import java.sql.DriverManager;
+ import java.sql.SQLException;
+ import java.sql.Connection;
+ import java.sql.Driver;
 
 public class Util {
 
@@ -9,7 +12,7 @@ public class Util {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "rootroot1991";
 
-    public static Connection Connection() {
+    public static Connection getConnection() {
         try {
             Driver driver = new com.mysql.cj.jdbc.Driver();
             DriverManager.registerDriver(driver);
@@ -19,7 +22,7 @@ public class Util {
             }
         return connection;
     }
-        // реализуйте настройку соеденения с БД
+    // реализуйте настройку соеденения с БД
     }
 
 
